@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -23,31 +22,31 @@
 body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
 
 /* ── HEADER ── */
-.site-header{background:#fff;border-bottom:1px solid var(–border);padding:28px 20px 24px;text-align:center}
+.site-header{background:#fff;border-bottom:1px solid var(--border);padding:28px 20px 24px;text-align:center}
 .header-logos{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:16px}
-.header-logo-box{width:72px;height:72px;border-radius:14px;border:1px solid var(–border);background:var(–soft);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.header-logo-box{width:72px;height:72px;border-radius:14px;border:1px solid var(--border);background:var(--soft);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
 .header-logo-box img{width:100%;height:100%;object-fit:contain}
-.header-logo-box span{font-size:10px;font-weight:700;color:var(–muted);text-align:center;line-height:1.2;padding:4px}
-.header-divider{width:1px;height:48px;background:var(–border)}
-.site-header h1{font-size:clamp(14px,3.5vw,20px);font-weight:800;color:var(–text);line-height:1.3;letter-spacing:-0.2px}
-.site-header h1 span{color:var(–accent)}
-.site-header p{font-size:13px;color:var(–muted);margin-top:5px;font-weight:400}
+.header-logo-box span{font-size:10px;font-weight:700;color:var(--muted);text-align:center;line-height:1.2;padding:4px}
+.header-divider{width:1px;height:48px;background:var(--border)}
+.site-header h1{font-size:clamp(14px,3.5vw,20px);font-weight:800;color:var(--text);line-height:1.3;letter-spacing:-0.2px}
+.site-header h1 span{color:var(--accent)}
+.site-header p{font-size:13px;color:var(--muted);margin-top:5px;font-weight:400}
 
 /* ── HOME ── */
 #home{display:block}
 .firms-list{max-width:560px;margin:0 auto;padding:24px 16px 64px;display:flex;flex-direction:column;gap:12px}
 
-.firm-row{background:var(–card);border:1px solid var(–border);border-radius:var(–radius-card);padding:16px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s,border-color .18s;-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden}
-.firm-row::before{content:’’;position:absolute;left:0;top:0;bottom:0;width:4px;background:var(–accent);border-radius:4px 0 0 4px;opacity:0;transition:opacity .18s}
+.firm-row{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s,border-color .18s;-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden}
+.firm-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent);border-radius:4px 0 0 4px;opacity:0;transition:opacity .18s}
 .firm-row:hover{box-shadow:0 8px 28px rgba(26,111,181,.12);transform:translateY(-2px);border-color:#b8cfe8}
 .firm-row:hover::before{opacity:1}
 .firm-row:active{transform:scale(.985)}
 
-.logo-box{width:50px;height:50px;border-radius:12px;border:1px solid var(–border);background:var(–soft);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(–muted);flex-shrink:0;overflow:hidden}
+.logo-box{width:50px;height:50px;border-radius:12px;border:1px solid var(--border);background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--muted);flex-shrink:0;overflow:hidden}
 .logo-box img{width:100%;height:100%;object-fit:contain}
 .firm-meta{flex:1;min-width:0}
-.firm-meta strong{display:block;font-size:15px;font-weight:700;line-height:1.2;color:var(–text)}
-.firm-meta span{display:block;font-size:12px;color:var(–muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.firm-meta strong{display:block;font-size:15px;font-weight:700;line-height:1.2;color:var(--text)}
+.firm-meta span{display:block;font-size:12px;color:var(--muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chevron{color:#b0bec8;font-size:20px;line-height:1;flex-shrink:0;font-weight:300}
 
 /* ── DETAIL ── */
@@ -55,43 +54,42 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 .detail-inner{max-width:500px;margin:0 auto;padding:0 16px 72px}
 
 .topbar{padding:16px 0 0;display:flex;align-items:center}
-.back-btn{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(–accent);cursor:pointer;padding:8px 0;background:none;border:none;-webkit-tap-highlight-color:transparent}
-.back-btn:hover{color:var(–text)}
+.back-btn{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--accent);cursor:pointer;padding:8px 0;background:none;border:none;-webkit-tap-highlight-color:transparent}
+.back-btn:hover{color:var(--text)}
 .back-btn svg{width:18px;height:18px}
 
 .detail-hero{text-align:center;padding:28px 0 32px}
-.detail-logo{width:88px;height:88px;border-radius:20px;border:1px solid var(–border);background:var(–soft);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:var(–muted);margin:0 auto 14px;overflow:hidden;box-shadow:0 4px 16px rgba(26,111,181,.1)}
+.detail-logo{width:88px;height:88px;border-radius:20px;border:1px solid var(--border);background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:var(--muted);margin:0 auto 14px;overflow:hidden;box-shadow:0 4px 16px rgba(26,111,181,.1)}
 .detail-logo img{width:100%;height:100%;object-fit:contain}
 .detail-hero h2{font-size:24px;font-weight:800;letter-spacing:-0.3px}
-.detail-hero p{font-size:13px;color:var(–muted);margin-top:5px;font-weight:400}
+.detail-hero p{font-size:13px;color:var(--muted);margin-top:5px;font-weight:400}
 
 /* ── GRID LINKS ── */
 .links-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .links-grid.cols2{grid-template-columns:repeat(2,1fr)}
 .links-grid.cols1{grid-template-columns:1fr}
 
-.gbtn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px 12px 16px;border-radius:16px;border:1px solid var(–border);text-decoration:none;color:var(–text);background:#fff;transition:background .15s,border-color .15s,color .15s,transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent;aspect-ratio:1/1}
+.gbtn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px 12px 16px;border-radius:16px;border:1px solid var(--border);text-decoration:none;color:var(--text);background:#fff;transition:background .15s,border-color .15s,color .15s,transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent;aspect-ratio:1/1}
 .gbtn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
 .gbtn:active{transform:scale(.95)}
 .gbtn svg{width:36px;height:36px;flex-shrink:0}
 .gbtn span{font-size:12px;font-weight:700;letter-spacing:0.2px;text-align:center}
 
 .gbtn.ig{border-color:#f5c0d4}
-.gbtn.ig:hover{background:var(–ig);border-color:var(–ig);color:#fff}
+.gbtn.ig:hover{background:var(--ig);border-color:var(--ig);color:#fff}
 .gbtn.fb{border-color:#b8d4f4}
-.gbtn.fb:hover{background:var(–fb);border-color:var(–fb);color:#fff}
+.gbtn.fb:hover{background:var(--fb);border-color:var(--fb);color:#fff}
 .gbtn.yt{border-color:#ffbcbc}
-.gbtn.yt:hover{background:var(–yt);border-color:var(–yt);color:#fff}
+.gbtn.yt:hover{background:var(--yt);border-color:var(--yt);color:#fff}
 .gbtn.pt{border-color:#ffbcbc}
-.gbtn.pt:hover{background:var(–pt);border-color:var(–pt);color:#fff}
+.gbtn.pt:hover{background:var(--pt);border-color:var(--pt);color:#fff}
 .gbtn.wa{border-color:#a8edca}
-.gbtn.wa:hover{background:var(–wa);border-color:var(–wa);color:#fff}
+.gbtn.wa:hover{background:var(--wa);border-color:var(--wa);color:#fff}
 .gbtn.web{border-color:#b8cfe8}
-.gbtn.web:hover{background:var(–web);border-color:var(–web);color:#fff}
+.gbtn.web:hover{background:var(--web);border-color:var(--web);color:#fff}
 
 footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </style>
-
 </head>
 <body>
 
@@ -110,89 +108,85 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </div>
 
 <!-- HOME -->
-
 <div id="home">
   <div class="firms-list">
 
-```
-<a class="firm-row" href="#ozkoyum" onclick="show('ozkoyum')">
-  <div class="logo-box"><img src="logos/ozkoyum.jpg" onerror="this.parentNode.innerHTML='ÖK'" alt="Özköyüm"></div>
-  <div class="firm-meta">
-    <strong>Özköyüm</strong>
-    <span>Zeytin &amp; Zeytinyağı</span>
-  </div>
-  <div class="chevron">›</div>
-</a>
+    <a class="firm-row" href="#ozkoyum" onclick="show('ozkoyum')">
+      <div class="logo-box"><img src="logos/ozkoyum.jpg" onerror="this.parentNode.innerHTML='ÖK'" alt="Özköyüm"></div>
+      <div class="firm-meta">
+        <strong>Özköyüm</strong>
+        <span>Zeytin &amp; Zeytinyağı</span>
+      </div>
+      <div class="chevron">›</div>
+    </a>
 
-<a class="firm-row" href="#boztepe" onclick="show('boztepe')">
-  <div class="logo-box"><img src="logos/boztepe.jpg" onerror="this.parentNode.innerHTML='BZ'" alt="Boztepe"></div>
-  <div class="firm-meta">
-    <strong>Boztepe</strong>
-    <span>Zeytin &amp; Zeytinyağı</span>
-  </div>
-  <div class="chevron">›</div>
-</a>
+    <a class="firm-row" href="#boztepe" onclick="show('boztepe')">
+      <div class="logo-box"><img src="logos/boztepe.jpg" onerror="this.parentNode.innerHTML='BZ'" alt="Boztepe"></div>
+      <div class="firm-meta">
+        <strong>Boztepe</strong>
+        <span>Zeytin &amp; Zeytinyağı</span>
+      </div>
+      <div class="chevron">›</div>
+    </a>
 
-<a class="firm-row" href="#beksan" onclick="show('beksan')">
-  <div class="logo-box"><img src="logos/beksan.jpg" onerror="this.parentNode.innerHTML='BK'" alt="Beksan"></div>
-  <div class="firm-meta">
-    <strong>Beksan</strong>
-    <span>Unlu Mamuller</span>
-  </div>
-  <div class="chevron">›</div>
-</a>
+    <a class="firm-row" href="#beksan" onclick="show('beksan')">
+      <div class="logo-box"><img src="logos/beksan.jpg" onerror="this.parentNode.innerHTML='BK'" alt="Beksan"></div>
+      <div class="firm-meta">
+        <strong>Beksan</strong>
+        <span>Unlu Mamuller</span>
+      </div>
+      <div class="chevron">›</div>
+    </a>
 
-<a class="firm-row" href="#mercan" onclick="show('mercan')">
-  <div class="logo-box"><img src="logos/mercan.jpg" onerror="this.parentNode.innerHTML='MG'" alt="Mercan Gıda"></div>
-  <div class="firm-meta">
-    <strong>Mercan Gıda</strong>
-    <span>Doğal Ürünler</span>
-  </div>
-  <div class="chevron">›</div>
-</a>
+    <a class="firm-row" href="#mercan" onclick="show('mercan')">
+      <div class="logo-box"><img src="logos/mercan.jpg" onerror="this.parentNode.innerHTML='MG'" alt="Mercan Gıda"></div>
+      <div class="firm-meta">
+        <strong>Mercan Gıda</strong>
+        <span>Doğal Ürünler</span>
+      </div>
+      <div class="chevron">›</div>
+    </a>
 
-<a class="firm-row" href="#ozem" onclick="show('ozem')">
-  <div class="logo-box"><img src="logos/ozem.jpg" onerror="this.parentNode.innerHTML='ÖY'" alt="Özem'le Yaşam"></div>
-  <div class="firm-meta">
-    <strong>Özem'le Yaşam</strong>
-    <span>Sağlıklı Yaşam</span>
-  </div>
-  <div class="chevron">›</div>
-</a>
+    <a class="firm-row" href="#ozem" onclick="show('ozem')">
+      <div class="logo-box"><img src="logos/ozem.jpg" onerror="this.parentNode.innerHTML='ÖY'" alt="Özem'le Yaşam"></div>
+      <div class="firm-meta">
+        <strong>Özem'le Yaşam</strong>
+        <span>Sağlıklı Yaşam</span>
+      </div>
+      <div class="chevron">›</div>
+    </a>
 
-<a class="firm-row" href="#saribas" onclick="show('saribas')">
-  <div class="logo-box"><img src="logos/saribas.jpg" onerror="this.parentNode.innerHTML='SB'" alt="Sarıbaş"></div>
-  <div class="firm-meta">
-    <strong>Sarıbaş</strong>
-    <span>Süt &amp; Zeytin Ürünleri</span>
-  </div>
-  <div class="chevron">›</div>
-</a>
+    <a class="firm-row" href="#saribas" onclick="show('saribas')">
+      <div class="logo-box"><img src="logos/saribas.jpg" onerror="this.parentNode.innerHTML='SB'" alt="Sarıbaş"></div>
+      <div class="firm-meta">
+        <strong>Sarıbaş</strong>
+        <span>Süt &amp; Zeytin Ürünleri</span>
+      </div>
+      <div class="chevron">›</div>
+    </a>
 
-<a class="firm-row" href="#maze" onclick="show('maze')">
-  <div class="logo-box"><img src="logos/maze.jpg" onerror="this.parentNode.innerHTML='MZ'" alt="Maze Zeytinyağı"></div>
-  <div class="firm-meta">
-    <strong>Maze Zeytinyağı</strong>
-    <span>Zeytinyağı</span>
-  </div>
-  <div class="chevron">›</div>
-</a>
+    <a class="firm-row" href="#maze" onclick="show('maze')">
+      <div class="logo-box"><img src="logos/maze.jpg" onerror="this.parentNode.innerHTML='MZ'" alt="Maze Zeytinyağı"></div>
+      <div class="firm-meta">
+        <strong>Maze Zeytinyağı</strong>
+        <span>Zeytinyağı</span>
+      </div>
+      <div class="chevron">›</div>
+    </a>
 
-<a class="firm-row" href="#idatat" onclick="show('idatat')">
-  <div class="logo-box"><img src="logos/idatat.jpg" onerror="this.parentNode.innerHTML='İD'" alt="İdatat"></div>
-  <div class="firm-meta">
-    <strong>İdatat</strong>
-    <span>Zeytin &amp; Zeytinyağı</span>
-  </div>
-  <div class="chevron">›</div>
-</a>
-```
+    <a class="firm-row" href="#idatat" onclick="show('idatat')">
+      <div class="logo-box"><img src="logos/idatat.jpg" onerror="this.parentNode.innerHTML='İD'" alt="İdatat"></div>
+      <div class="firm-meta">
+        <strong>İdatat</strong>
+        <span>Zeytin &amp; Zeytinyağı</span>
+      </div>
+      <div class="chevron">›</div>
+    </a>
 
   </div>
 </div>
 
 <!-- ÖZKÖYÜM -->
-
 <div id="ozkoyum" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
@@ -227,7 +221,6 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </div>
 
 <!-- BOZTEPE -->
-
 <div id="boztepe" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
@@ -258,7 +251,6 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </div>
 
 <!-- BEKSAN -->
-
 <div id="beksan" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
@@ -289,7 +281,6 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </div>
 
 <!-- MERCAN GIDA -->
-
 <div id="mercan" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
@@ -308,7 +299,6 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </div>
 
 <!-- ÖZEM'LE YAŞAM -->
-
 <div id="ozem" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
@@ -347,7 +337,6 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </div>
 
 <!-- SARIBAŞ -->
-
 <div id="saribas" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
@@ -382,7 +371,6 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </div>
 
 <!-- MAZE ZEYTİNYAĞI -->
-
 <div id="maze" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
@@ -401,7 +389,6 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </div>
 
 <!-- İDATAT -->
-
 <div id="idatat" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
@@ -453,6 +440,5 @@ window.addEventListener('popstate',function(){
   if(hh&&pages.indexOf(hh)>-1){show(hh)}else{goBack();}
 });
 </script>
-
 </body>
 </html>
