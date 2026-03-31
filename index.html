@@ -15,7 +15,6 @@
   --muted:#7a8a9a;
   --soft:#e8eef4;
   --accent:#1a6fb5;
-  --accent2:#e8572a;
   --radius-card:20px;
   --ig:#e1306c;--fb:#1877f2;--yt:#ff0000;--pt:#e60023;--wa:#25d366;--web:#1a6fb5;--x:#000000;
 }
@@ -34,14 +33,19 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 #home{display:block}
 .firms-grid{max-width:600px;margin:0 auto;padding:24px 16px 64px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 
-.firm-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px 12px 16px;display:flex;flex-direction:column;align-items:center;cursor:pointer;text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s,border-color .18s;-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden}
+.firm-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px 12px 16px;display:flex;flex-direction:column;align-items:center;cursor:pointer;text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s,border-color .18s;-webkit-tap-highlight-color:transparent}
 .firm-card:hover{box-shadow:0 8px 28px rgba(26,111,181,.14);transform:translateY(-3px);border-color:#b8cfe8}
 .firm-card:active{transform:scale(.97)}
 
-.card-logo{width:72px;height:72px;border-radius:16px;border:1px solid var(--border);background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--muted);overflow:hidden;margin-bottom:12px;flex-shrink:0}
+.card-logo{width:72px;height:72px;border-radius:16px;border:1px solid var(--border);background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--muted);overflow:hidden;margin-bottom:12px;flex-shrink:0;text-align:center;line-height:1.2;padding:4px}
 .card-logo img{width:100%;height:100%;object-fit:contain}
 .card-name{font-size:13px;font-weight:800;line-height:1.25;color:var(--text);text-align:center;margin-bottom:6px}
 .card-sector{font-size:10.5px;font-weight:500;color:var(--muted);text-align:center;line-height:1.3}
+
+/* coğrafi işaret kartı özel vurgu */
+.firm-card.cografi{border-color:#c8dfc8;background:linear-gradient(160deg,#f6fbf6 0%,#fff 100%)}
+.firm-card.cografi:hover{border-color:#5a9a5a;box-shadow:0 8px 28px rgba(60,140,60,.15)}
+.firm-card.cografi .card-sector{color:#4a8a4a}
 
 .detail{display:none;min-height:100vh}
 .detail-inner{max-width:500px;margin:0 auto;padding:0 16px 72px}
@@ -51,12 +55,13 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 .back-btn:hover{color:var(--text)}
 .back-btn svg{width:18px;height:18px}
 
-.detail-hero{text-align:center;padding:28px 0 32px}
-.detail-logo{width:88px;height:88px;border-radius:20px;border:1px solid var(--border);background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:var(--muted);margin:0 auto 14px;overflow:hidden;box-shadow:0 4px 16px rgba(26,111,181,.1)}
+.detail-hero{text-align:center;padding:28px 0 24px}
+.detail-logo{width:88px;height:88px;border-radius:20px;border:1px solid var(--border);background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--muted);margin:0 auto 14px;overflow:hidden;box-shadow:0 4px 16px rgba(26,111,181,.1);text-align:center;line-height:1.3;padding:6px}
 .detail-logo img{width:100%;height:100%;object-fit:contain}
-.detail-hero h2{font-size:24px;font-weight:800;letter-spacing:-0.3px}
+.detail-hero h2{font-size:22px;font-weight:800;letter-spacing:-0.3px;line-height:1.3}
 .detail-hero p{font-size:13px;color:var(--muted);margin-top:5px;font-weight:400}
 
+/* sosyal medya grid */
 .links-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .links-grid.cols2{grid-template-columns:repeat(2,1fr)}
 .links-grid.cols1{grid-template-columns:1fr}
@@ -66,21 +71,34 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 .gbtn:active{transform:scale(.95)}
 .gbtn svg{width:36px;height:36px;flex-shrink:0}
 .gbtn span{font-size:12px;font-weight:700;letter-spacing:0.2px;text-align:center}
+.gbtn.ig{border-color:#f5c0d4}.gbtn.ig:hover{background:var(--ig);border-color:var(--ig);color:#fff}
+.gbtn.fb{border-color:#b8d4f4}.gbtn.fb:hover{background:var(--fb);border-color:var(--fb);color:#fff}
+.gbtn.yt{border-color:#ffbcbc}.gbtn.yt:hover{background:var(--yt);border-color:var(--yt);color:#fff}
+.gbtn.pt{border-color:#ffbcbc}.gbtn.pt:hover{background:var(--pt);border-color:var(--pt);color:#fff}
+.gbtn.wa{border-color:#a8edca}.gbtn.wa:hover{background:var(--wa);border-color:var(--wa);color:#fff}
+.gbtn.web{border-color:#b8cfe8}.gbtn.web:hover{background:var(--web);border-color:var(--web);color:#fff}
+.gbtn.x{border-color:#ccc}.gbtn.x:hover{background:var(--x);border-color:var(--x);color:#fff}
 
-.gbtn.ig{border-color:#f5c0d4}
-.gbtn.ig:hover{background:var(--ig);border-color:var(--ig);color:#fff}
-.gbtn.fb{border-color:#b8d4f4}
-.gbtn.fb:hover{background:var(--fb);border-color:var(--fb);color:#fff}
-.gbtn.yt{border-color:#ffbcbc}
-.gbtn.yt:hover{background:var(--yt);border-color:var(--yt);color:#fff}
-.gbtn.pt{border-color:#ffbcbc}
-.gbtn.pt:hover{background:var(--pt);border-color:var(--pt);color:#fff}
-.gbtn.wa{border-color:#a8edca}
-.gbtn.wa:hover{background:var(--wa);border-color:var(--wa);color:#fff}
-.gbtn.web{border-color:#b8cfe8}
-.gbtn.web:hover{background:var(--web);border-color:var(--web);color:#fff}
-.gbtn.x{border-color:#ccc}
-.gbtn.x:hover{background:var(--x);border-color:var(--x);color:#fff}
+/* coğrafi işaret üretici listesi */
+.cografi-intro{background:#f0f7f0;border:1px solid #c8dfc8;border-radius:14px;padding:14px 16px;margin-bottom:20px;display:flex;align-items:flex-start;gap:10px}
+.cografi-intro svg{width:18px;height:18px;flex-shrink:0;color:#4a8a4a;margin-top:1px}
+.cografi-intro p{font-size:13px;color:#3a6a3a;font-weight:600;line-height:1.5}
+.cografi-intro a{color:#1a6fb5;text-decoration:underline}
+
+.producer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.producer-card{background:#fff;border:1px solid #c8dfc8;border-radius:16px;padding:18px 10px 14px;display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:var(--text);transition:box-shadow .18s,transform .18s,border-color .18s;-webkit-tap-highlight-color:transparent}
+.producer-card:hover{box-shadow:0 6px 20px rgba(60,140,60,.13);transform:translateY(-2px);border-color:#5a9a5a}
+.producer-card:active{transform:scale(.97)}
+.producer-logo{width:52px;height:52px;border-radius:12px;border:1px solid var(--border);background:var(--soft);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.producer-logo img{width:100%;height:100%;object-fit:contain}
+.producer-logo span{font-size:10px;font-weight:700;color:var(--muted);text-align:center;line-height:1.2;padding:2px}
+.producer-name{font-size:12px;font-weight:800;color:var(--text);text-align:center;line-height:1.3}
+.producer-web{font-size:10px;color:#4a8a4a;font-weight:600;text-align:center;line-height:1.2}
+.producer-card.last-one{grid-column:1/-1;flex-direction:row;justify-content:center;gap:16px;padding:16px 20px}
+.producer-card.last-one .producer-name{font-size:14px;text-align:left}
+.producer-card.last-one .producer-web{text-align:left}
+
+.section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:12px;margin-top:4px}
 
 footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
 </style>
@@ -123,10 +141,10 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
       <div class="card-sector">Unlu Mamuller</div>
     </a>
 
-    <a class="firm-card" href="#laboratuvar" onclick="show('laboratuvar')">
-      <div class="card-logo"><img src="logos/laboratuvar.jpg" onerror="this.parentNode.innerHTML='LAB'" alt="BTO Laboratuvarı"></div>
-      <div class="card-name">BTO Laboratuvarı</div>
-      <div class="card-sector">Analiz &amp; Test</div>
+    <a class="firm-card cografi" href="#cografi" onclick="show('cografi')">
+      <div class="card-logo"><img src="logos/cografi.jpg" onerror="this.parentNode.innerHTML='COĞ'" alt="Coğrafi İşaret"></div>
+      <div class="card-name">Burhaniye Coğrafi İşaretli Zeytinyağı</div>
+      <div class="card-sector">7 Üretici Firma</div>
     </a>
 
     <a class="firm-card" href="#ozem" onclick="show('ozem')">
@@ -165,26 +183,11 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
       <h2>Özköyüm</h2><p>Zeytin &amp; Zeytinyağı</p>
     </div>
     <div class="links-grid">
-      <a class="gbtn ig" href="https://www.instagram.com/ozkoyum/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a class="gbtn fb" href="https://www.facebook.com/ozkoyum/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <span>Facebook</span>
-      </a>
-      <a class="gbtn pt" href="https://tr.pinterest.com/ozkoyumzeytincilik/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.25-.87 3.5-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.11-2.39 3.11-5.22 0-2.15-1.45-3.76-4.07-3.76-2.97 0-4.81 2.22-4.81 4.69 0 .85.25 1.45.63 1.91.17.2.19.28.13.51-.05.17-.15.57-.19.73-.06.24-.25.32-.46.23-1.32-.54-1.93-1.99-1.93-3.61 0-2.68 2.26-5.88 6.76-5.88 3.62 0 5.99 2.62 5.99 5.44 0 3.72-2.07 6.51-5.11 6.51-1.02 0-1.98-.55-2.31-1.18l-.63 2.44c-.23.88-.84 1.97-1.25 2.64.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"/></svg>
-        <span>Pinterest</span>
-      </a>
-      <a class="gbtn web" href="https://www.ozkoyum.com/hakkimizda" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>Hakkımızda</span>
-      </a>
-      <a class="gbtn web" href="https://www.ozkoyum.com/iletisim" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>İletişim</span>
-      </a>
+      <a class="gbtn ig" href="https://www.instagram.com/ozkoyum/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg><span>Instagram</span></a>
+      <a class="gbtn fb" href="https://www.facebook.com/ozkoyum/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Facebook</span></a>
+      <a class="gbtn pt" href="https://tr.pinterest.com/ozkoyumzeytincilik/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.25-.87 3.5-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.11-2.39 3.11-5.22 0-2.15-1.45-3.76-4.07-3.76-2.97 0-4.81 2.22-4.81 4.69 0 .85.25 1.45.63 1.91.17.2.19.28.13.51-.05.17-.15.57-.19.73-.06.24-.25.32-.46.23-1.32-.54-1.93-1.99-1.93-3.61 0-2.68 2.26-5.88 6.76-5.88 3.62 0 5.99 2.62 5.99 5.44 0 3.72-2.07 6.51-5.11 6.51-1.02 0-1.98-.55-2.31-1.18l-.63 2.44c-.23.88-.84 1.97-1.25 2.64.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"/></svg><span>Pinterest</span></a>
+      <a class="gbtn web" href="https://www.ozkoyum.com/hakkimizda" target="_blank"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg><span>Hakkımızda</span></a>
+      <a class="gbtn web" href="https://www.ozkoyum.com/iletisim" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg><span>İletişim</span></a>
     </div>
     <footer>ozkoyum.com</footer>
   </div>
@@ -199,22 +202,10 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
       <h2>Boztepe</h2><p>Zeytin &amp; Zeytinyağı</p>
     </div>
     <div class="links-grid">
-      <a class="gbtn ig" href="https://www.instagram.com/boztepezeytincilik" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a class="gbtn fb" href="https://www.facebook.com/boztepezeytincilik" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <span>Facebook</span>
-      </a>
-      <a class="gbtn web" href="https://boztepe.com.tr/pages/kurumsal" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>Hakkımızda</span>
-      </a>
-      <a class="gbtn web" href="https://boztepe.com.tr/pages/iletisim" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>İletişim</span>
-      </a>
+      <a class="gbtn ig" href="https://www.instagram.com/boztepezeytincilik" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg><span>Instagram</span></a>
+      <a class="gbtn fb" href="https://www.facebook.com/boztepezeytincilik" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Facebook</span></a>
+      <a class="gbtn web" href="https://boztepe.com.tr/pages/kurumsal" target="_blank"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg><span>Hakkımızda</span></a>
+      <a class="gbtn web" href="https://boztepe.com.tr/pages/iletisim" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg><span>İletişim</span></a>
     </div>
     <footer>boztepe.com.tr</footer>
   </div>
@@ -229,58 +220,77 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
       <h2>Beksan</h2><p>Unlu Mamuller</p>
     </div>
     <div class="links-grid">
-      <a class="gbtn ig" href="https://www.instagram.com/beksanofficial/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a class="gbtn fb" href="https://www.facebook.com/beksan.burhaniye/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <span>Facebook</span>
-      </a>
-      <a class="gbtn wa" href="https://api.whatsapp.com/send/?phone=905414164143&text&type=phone_number&app_absent=0" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <span>WhatsApp</span>
-      </a>
-      <a class="gbtn web" href="https://beksan.com.tr/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>Website &amp; İletişim</span>
-      </a>
+      <a class="gbtn ig" href="https://www.instagram.com/beksanofficial/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg><span>Instagram</span></a>
+      <a class="gbtn fb" href="https://www.facebook.com/beksan.burhaniye/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Facebook</span></a>
+      <a class="gbtn wa" href="https://api.whatsapp.com/send/?phone=905414164143&text&type=phone_number&app_absent=0" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>WhatsApp</span></a>
+      <a class="gbtn web" href="https://beksan.com.tr/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg><span>Website &amp; İletişim</span></a>
     </div>
     <footer>beksan.com.tr</footer>
   </div>
 </div>
 
-<!-- BTO LABORATUVARI -->
-<div id="laboratuvar" class="detail">
+<!-- COĞRAFİ İŞARET -->
+<div id="cografi" class="detail">
   <div class="detail-inner">
     <div class="topbar"><button class="back-btn" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tüm Firmalar</button></div>
     <div class="detail-hero">
-      <div class="detail-logo"><img src="logos/laboratuvar.jpg" onerror="this.parentNode.innerHTML='LAB'" alt="BTO Laboratuvarı"></div>
-      <h2>BTO Laboratuvarı</h2><p>Burhaniye Ticaret Odası</p>
+      <div class="detail-logo"><img src="logos/cografi.jpg" onerror="this.parentNode.innerHTML='COĞ'" alt="Coğrafi İşaret"></div>
+      <h2>Burhaniye Coğrafi İşaretli Zeytinyağı</h2>
+      <p>Tescilli üretici firmalar</p>
     </div>
-    <div class="links-grid">
-      <a class="gbtn ig" href="https://www.instagram.com/burtolab/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a class="gbtn fb" href="https://www.facebook.com/burtolab/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <span>Facebook</span>
-      </a>
-      <a class="gbtn x" href="https://x.com/burtolab" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <span>X (Twitter)</span>
-      </a>
-      <a class="gbtn web" href="https://www.burtolab.com/hakkımızda" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>Hakkımızda</span>
-      </a>
-      <a class="gbtn web" href="https://www.burtolab.com/iletişim" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>İletişim</span>
-      </a>
+
+    <div class="cografi-intro">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+      <p>Burhaniye coğrafi işaretli zeytinyağı tescilini almış 7 üretici firma. Detaylı bilgi için <a href="https://www.burtolab.com/cografii%C5%9Faret" target="_blank">burtolab.com</a> adresini ziyaret edebilirsiniz.</p>
     </div>
-    <footer>burtolab.com</footer>
+
+    <div class="section-label">Tescilli Üreticiler</div>
+    <div class="producer-grid">
+
+      <a class="producer-card" href="https://noctosis789.com/" target="_blank">
+        <div class="producer-logo"><img src="logos/noctosis.jpg" onerror="this.parentNode.innerHTML='<span>NOC</span>'" alt="Noctosıs"></div>
+        <div class="producer-name">Noctosıs</div>
+        <div class="producer-web">noctosis789.com</div>
+      </a>
+
+      <a class="producer-card" href="https://www.ethembey.com/" target="_blank">
+        <div class="producer-logo"><img src="logos/ethembey.jpg" onerror="this.parentNode.innerHTML='<span>EB</span>'" alt="Ethem Bey"></div>
+        <div class="producer-name">Ethem Bey</div>
+        <div class="producer-web">ethembey.com</div>
+      </a>
+
+      <a class="producer-card" href="https://koktenzeytinyagi.com/index.php?route=common/home" target="_blank">
+        <div class="producer-logo"><img src="logos/kokten.jpg" onerror="this.parentNode.innerHTML='<span>KZ</span>'" alt="Kökten Zeytinyağı"></div>
+        <div class="producer-name">Kökten Zeytinyağı</div>
+        <div class="producer-web">koktenzeytinyagi.com</div>
+      </a>
+
+      <a class="producer-card" href="https://www.guvenasazeytinyagi.com/" target="_blank">
+        <div class="producer-logo"><img src="logos/guvenasa.jpg" onerror="this.parentNode.innerHTML='<span>GA</span>'" alt="Güven Asa"></div>
+        <div class="producer-name">Güven Asa</div>
+        <div class="producer-web">guvenasazeytinyagi.com</div>
+      </a>
+
+      <a class="producer-card" href="https://www.celalvolkanpekcan.com/" target="_blank">
+        <div class="producer-logo"><img src="logos/olive.jpg" onerror="this.parentNode.innerHTML='<span>OLV</span>'" alt="Olive"></div>
+        <div class="producer-name">C. Volkan Pekcan – Olive</div>
+        <div class="producer-web">celalvolkanpekcan.com</div>
+      </a>
+
+      <a class="producer-card" href="https://www.laleli.com.tr/" target="_blank">
+        <div class="producer-logo"><img src="logos/laleli.jpg" onerror="this.parentNode.innerHTML='<span>LL</span>'" alt="Laleli"></div>
+        <div class="producer-name">Laleli</div>
+        <div class="producer-web">laleli.com.tr</div>
+      </a>
+
+      <a class="producer-card" href="https://nerunoils.com/" target="_blank">
+        <div class="producer-logo"><img src="logos/nerun.jpg" onerror="this.parentNode.innerHTML='<span>NR</span>'" alt="Nerun"></div>
+        <div class="producer-name">Nerun</div>
+        <div class="producer-web">nerunoils.com</div>
+      </a>
+
+    </div>
+    <footer>burtolab.com/coğrafiişaret</footer>
   </div>
 </div>
 
@@ -293,30 +303,12 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
       <h2>Özem'le Yaşam</h2><p>Sağlıklı Yaşam</p>
     </div>
     <div class="links-grid">
-      <a class="gbtn ig" href="https://www.instagram.com/ozemleyasam/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a class="gbtn fb" href="https://www.facebook.com/ozemleyasam" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <span>Facebook</span>
-      </a>
-      <a class="gbtn pt" href="https://tr.pinterest.com/ozemleyasam/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.25-.87 3.5-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.11-2.39 3.11-5.22 0-2.15-1.45-3.76-4.07-3.76-2.97 0-4.81 2.22-4.81 4.69 0 .85.25 1.45.63 1.91.17.2.19.28.13.51-.05.17-.15.57-.19.73-.06.24-.25.32-.46.23-1.32-.54-1.93-1.99-1.93-3.61 0-2.68 2.26-5.88 6.76-5.88 3.62 0 5.99 2.62 5.99 5.44 0 3.72-2.07 6.51-5.11 6.51-1.02 0-1.98-.55-2.31-1.18l-.63 2.44c-.23.88-.84 1.97-1.25 2.64.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"/></svg>
-        <span>Pinterest</span>
-      </a>
-      <a class="gbtn yt" href="https://www.youtube.com/channel/UCzhMt6KJSg5ww9sPwZamZNg/featured" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.8"/><polygon points="10,9 16,12 10,15" fill="currentColor"/></svg>
-        <span>YouTube</span>
-      </a>
-      <a class="gbtn web" href="https://www.ozemleyasam.com/hakkimizda" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>Hakkımızda</span>
-      </a>
-      <a class="gbtn web" href="https://www.ozemleyasam.com/iletisim.aspx" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>İletişim</span>
-      </a>
+      <a class="gbtn ig" href="https://www.instagram.com/ozemleyasam/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg><span>Instagram</span></a>
+      <a class="gbtn fb" href="https://www.facebook.com/ozemleyasam" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Facebook</span></a>
+      <a class="gbtn pt" href="https://tr.pinterest.com/ozemleyasam/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.25-.87 3.5-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.11-2.39 3.11-5.22 0-2.15-1.45-3.76-4.07-3.76-2.97 0-4.81 2.22-4.81 4.69 0 .85.25 1.45.63 1.91.17.2.19.28.13.51-.05.17-.15.57-.19.73-.06.24-.25.32-.46.23-1.32-.54-1.93-1.99-1.93-3.61 0-2.68 2.26-5.88 6.76-5.88 3.62 0 5.99 2.62 5.99 5.44 0 3.72-2.07 6.51-5.11 6.51-1.02 0-1.98-.55-2.31-1.18l-.63 2.44c-.23.88-.84 1.97-1.25 2.64.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"/></svg><span>Pinterest</span></a>
+      <a class="gbtn yt" href="https://www.youtube.com/channel/UCzhMt6KJSg5ww9sPwZamZNg/featured" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.8"/><polygon points="10,9 16,12 10,15" fill="currentColor"/></svg><span>YouTube</span></a>
+      <a class="gbtn web" href="https://www.ozemleyasam.com/hakkimizda" target="_blank"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg><span>Hakkımızda</span></a>
+      <a class="gbtn web" href="https://www.ozemleyasam.com/iletisim.aspx" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg><span>İletişim</span></a>
     </div>
     <footer>ozemleyasam.com</footer>
   </div>
@@ -331,26 +323,11 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
       <h2>Sarıbaş</h2><p>Süt &amp; Zeytin Ürünleri</p>
     </div>
     <div class="links-grid">
-      <a class="gbtn ig" href="https://www.instagram.com/saribasgurme/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a class="gbtn fb" href="https://www.facebook.com/SaribasSutVeZeytinUrunleri" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <span>Facebook</span>
-      </a>
-      <a class="gbtn yt" href="https://www.youtube.com/@saribasgurme3346" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.8"/><polygon points="10,9 16,12 10,15" fill="currentColor"/></svg>
-        <span>YouTube</span>
-      </a>
-      <a class="gbtn web" href="https://www.saribasgurme.com/hakkimizda" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>Hakkımızda</span>
-      </a>
-      <a class="gbtn web" href="https://www.saribasgurme.com/iletisim" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>İletişim</span>
-      </a>
+      <a class="gbtn ig" href="https://www.instagram.com/saribasgurme/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg><span>Instagram</span></a>
+      <a class="gbtn fb" href="https://www.facebook.com/SaribasSutVeZeytinUrunleri" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Facebook</span></a>
+      <a class="gbtn yt" href="https://www.youtube.com/@saribasgurme3346" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.8"/><polygon points="10,9 16,12 10,15" fill="currentColor"/></svg><span>YouTube</span></a>
+      <a class="gbtn web" href="https://www.saribasgurme.com/hakkimizda" target="_blank"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg><span>Hakkımızda</span></a>
+      <a class="gbtn web" href="https://www.saribasgurme.com/iletisim" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg><span>İletişim</span></a>
     </div>
     <footer>saribasgurme.com</footer>
   </div>
@@ -365,14 +342,8 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
       <h2>Maze Zeytinyağı</h2><p>Zeytinyağı</p>
     </div>
     <div class="links-grid cols2">
-      <a class="gbtn ig" href="https://www.instagram.com/mazeoliveoil/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a class="gbtn web" href="https://www.mazeolive.com" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>Website</span>
-      </a>
+      <a class="gbtn ig" href="https://www.instagram.com/mazeoliveoil/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg><span>Instagram</span></a>
+      <a class="gbtn web" href="https://www.mazeolive.com" target="_blank"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg><span>Website</span></a>
     </div>
     <footer>mazeolive.com</footer>
   </div>
@@ -387,29 +358,17 @@ footer{text-align:center;padding-top:20px;font-size:11px;color:#aab}
       <h2>İdatat</h2><p>Zeytin &amp; Zeytinyağı</p>
     </div>
     <div class="links-grid">
-      <a class="gbtn ig" href="https://www.instagram.com/idatatcom/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a class="gbtn fb" href="https://www.facebook.com/idatatcom/?locale=tr_TR" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <span>Facebook</span>
-      </a>
-      <a class="gbtn web" href="https://www.idatat.com/hakkimizda" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>Hakkımızda</span>
-      </a>
-      <a class="gbtn web" href="https://www.idatat.com/iletisim" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>İletişim</span>
-      </a>
+      <a class="gbtn ig" href="https://www.instagram.com/idatatcom/" target="_blank"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg><span>Instagram</span></a>
+      <a class="gbtn fb" href="https://www.facebook.com/idatatcom/?locale=tr_TR" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Facebook</span></a>
+      <a class="gbtn web" href="https://www.idatat.com/hakkimizda" target="_blank"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg><span>Hakkımızda</span></a>
+      <a class="gbtn web" href="https://www.idatat.com/iletisim" target="_blank"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg><span>İletişim</span></a>
     </div>
     <footer>idatat.com</footer>
   </div>
 </div>
 
 <script>
-var pages=['ozkoyum','boztepe','beksan','laboratuvar','ozem','saribas','maze','idatat'];
+var pages=['ozkoyum','boztepe','beksan','cografi','ozem','saribas','maze','idatat'];
 function show(id){
   document.getElementById('home').style.display='none';
   pages.forEach(function(p){document.getElementById(p).style.display=p===id?'block':'none'});
